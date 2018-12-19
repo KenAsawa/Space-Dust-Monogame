@@ -1,0 +1,25 @@
+C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\MonoGame.Framework.dll.config
+C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\x86\SDL2.dll
+C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\x64\SDL2.dll
+C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\x86\soft_oal.dll
+C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\x64\soft_oal.dll
+C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\x86\libSDL2-2.0.so.0
+C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\x64\libSDL2-2.0.so.0
+C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\x86\libopenal.so.1
+C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\x64\libopenal.so.1
+C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\libSDL2-2.0.0.dylib
+C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\libopenal.1.dylib
+C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Space Dust.exe
+C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Space Dust.pdb
+C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\MonoGame.Framework.dll
+C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\obj\Debug\Space Dust.csprojAssemblyReference.cache
+C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\obj\Debug\Space Dust.csproj.CoreCompileInputs.cache
+C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\obj\Debug\Space Dust.csproj.CopyComplete
+C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\obj\Debug\Space Dust.exe
+C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\obj\Debug\Space Dust.pdb
+C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Content\playerShip1_blue.xnb
+C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Content\laserBlue01.xnb
+C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Content\pointerBlue.xnb
+C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Content\NebulaTile.xnb
+C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Content\purple.xnb
+C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Content\enemyRed4.xnb
