@@ -39,9 +39,7 @@ namespace Space_Dust
                 timeUntilStart--;
                 color = Color.White * (1 - timeUntilStart / 60f);
             }
-
             Position += Velocity;
-            Velocity *= 0.8f; //Friction
         }
 
         private void AddBehaviour(IEnumerable<int> behaviour)
@@ -64,11 +62,11 @@ namespace Space_Dust
             hitpoints--;
             if(enemyType==1)
             {
-                Sound.hitAsteroid.Play(0.8f, rand.NextFloat(-1f, 1f), 0);
+                Assets.hitAsteroid.Play(0.5f, rand.NextFloat(-1f, 1f), 0);
             }
             if (enemyType == 0)
             {
-                Sound.hitMetal.Play(0.5f, rand.NextFloat(-1f, -0.5f), 0);
+                Assets.hitMetal.Play(0.2f, rand.NextFloat(-1f, -0.5f), 0);
             }
             if(hitpoints <= 0)
             {
@@ -87,7 +85,7 @@ namespace Space_Dust
         public void HandleCollision(Enemy other)
         {
             var d = Position - other.Position;
-            Velocity += 100 * d / (d.LengthSquared() + 1);
+            Velocity += 10 * d / (d.LengthSquared() + 1);
         }
 
         //Create Enemies
@@ -127,7 +125,7 @@ namespace Space_Dust
                 Velocity += (PlayerShip.Instance.Position - Position).ScaleTo(acceleration);
                 if (Velocity != Vector2.Zero)
                     Orientation = (float)(Velocity.ToAngle() - (Math.PI / 2)); //The - Math.PI/2  corrects the angle.
-
+                Velocity *= 0.8f; //Friction
                 yield return 0;
             }
         }
@@ -136,10 +134,11 @@ namespace Space_Dust
         {
             int Y = rand.Next(6) - 3;
             int X = rand.Next(6) - 3;
+            Velocity.X = X;
+            Velocity.Y = Y;
             while (true)
             {
-                Velocity.X = X;
-                Velocity.Y = Y;
+                Orientation -= 0.005f;
                 yield return 0;
             }
         }

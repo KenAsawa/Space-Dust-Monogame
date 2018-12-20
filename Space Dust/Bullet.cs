@@ -28,5 +28,10 @@ namespace Space_Dust
             else
                 IsExpired = true;
         }
+
+        public void Kill()
+        {
+            IsExpired = true;
+        }
     }
 }

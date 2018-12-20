@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>C:/Users/docto/Desktop/Personal Coding Projects/Monogame/Space Dust/Space Dust/Content/Break the Targets (Remix) - by Cyber Shaman.mp3</SourceFile>
+  <SourceTime>2018-12-20T12:22:45.1592687-06:00</SourceTime>
+  <DestFile>C:/Users/docto/Desktop/Personal Coding Projects/Monogame/Space Dust/Space Dust/Content/bin/DesktopGL/Content/Break the Targets (Remix) - by Cyber Shaman.xnb</DestFile>
+  <DestTime>2018-12-20T12:25:41.1083494-06:00</DestTime>
+  <Importer>Mp3Importer</Importer>
+  <ImporterTime>2018-12-08T10:35:54-06:00</ImporterTime>
+  <Processor>SongProcessor</Processor>
+  <ProcessorTime>2018-12-08T10:35:54-06:00</ProcessorTime>
+  <Parameters>
+    <Key>Quality</Key>
+    <Value>Best</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput>
+    <string>C:/Users/docto/Desktop/Personal Coding Projects/Monogame/Space Dust/Space Dust/Content/bin/DesktopGL/Content/Break the Targets (Remix) - by Cyber Shaman.ogg</string>
+  </BuildOutput>
+</PipelineBuildEvent>

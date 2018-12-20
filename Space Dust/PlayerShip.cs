@@ -8,6 +8,7 @@ namespace Space_Dust
     //Player is an Entity
     class PlayerShip : Entity
     {
+        private KeyboardState keyboardState;
         const int cooldownFrames = 10;
         int cooldownRemaining = 0;
         static Random rand = new Random();
@@ -85,17 +86,31 @@ namespace Space_Dust
                 offset = Vector2.Transform(new Vector2(25, 8), aimQuat);
                 EntityManager.Add(new Bullet(Position + offset, vel));
                 //Play laser sound
-                Sound.Shot.Play(0.8f, rand.NextFloat(-0.2f, 0.2f), 0);
+                if(rand.Next(2)==0)
+                {
+                    Assets.laser1.Play(0.8f, rand.NextFloat(-0.2f, 0.2f), 0);
+                }
+                else
+                {
+                    Assets.laser2.Play(0.8f, rand.NextFloat(-0.2f, 0.2f), 0);
+                }
+                
             }
-
-            if (cooldownRemaining > 0)
+                if (cooldownRemaining > 0)
                 cooldownRemaining--;
         }
 
         public override void Draw(SpriteBatch spriteBatch)
         {
             if (!IsDead)
+            {
                 base.Draw(spriteBatch);
+                spriteBatch.Draw(Assets.fireEffect, new Vector2(Position.X, Position.Y), null, color, Orientation, new Vector2(Assets.fireEffect.Width * (.50f), -(Assets.fireEffect.Height) * (1.2f)), 1f, 0, 0);
+            }
+            //spriteBatch.Draw(Assets.fireEffect, new Vector2(Position.X, Position.Y), null, color, Orientation, new Vector2(Size.X-92,Size.Y-113), 1f, 0, 0);
+            //spriteBatch.Draw(Assets.fireEffect, new Vector2(Position.X, Position.Y), null, color, Orientation, new Vector2(Assets.Player.Width - 92, Assets.Player.Height - 113), 1f, 0, 0);
+
+
         }
     }
 }
