@@ -5,13 +5,19 @@
   <Config />
   <SourceFiles>
     <File>C:/Users/docto/Desktop/Personal Coding Projects/Monogame/Space Dust/Space Dust/Content/enemyRed4.png</File>
+    <File>C:/Users/docto/Desktop/Personal Coding Projects/Monogame/Space Dust/Space Dust/Content/File.spritefont</File>
     <File>C:/Users/docto/Desktop/Personal Coding Projects/Monogame/Space Dust/Space Dust/Content/laserBlue01.png</File>
     <File>C:/Users/docto/Desktop/Personal Coding Projects/Monogame/Space Dust/Space Dust/Content/NebulaTile.jpg</File>
     <File>C:/Users/docto/Desktop/Personal Coding Projects/Monogame/Space Dust/Space Dust/Content/playerShip1_blue.png</File>
     <File>C:/Users/docto/Desktop/Personal Coding Projects/Monogame/Space Dust/Space Dust/Content/pointerBlue.png</File>
     <File>C:/Users/docto/Desktop/Personal Coding Projects/Monogame/Space Dust/Space Dust/Content/purple.png</File>
+    <File>C:/Users/docto/Desktop/Personal Coding Projects/Monogame/Space Dust/Space Dust/Content/sfx_laser1.ogg</File>
+    <File>C:/Users/docto/Desktop/Personal Coding Projects/Monogame/Space Dust/Space Dust/Content/sfx_laser2.ogg</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File>Score.spritefont</File>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

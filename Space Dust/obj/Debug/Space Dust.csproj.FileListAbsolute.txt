@@ -23,3 +23,6 @@ C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\b
 C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Content\NebulaTile.xnb
 C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Content\purple.xnb
 C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Content\enemyRed4.xnb
+C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Content\Score.xnb
+C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Content\sfx_laser1.xnb
+C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Content\sfx_laser2.xnb

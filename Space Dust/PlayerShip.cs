@@ -38,7 +38,12 @@ namespace Space_Dust
         public void Kill()
         {
             framesUntilRespawn = 60;
+            PlayerStatus.RemoveLife();
             EnemySpawner.Reset();
+            if(PlayerStatus.Lives <= 0)
+            {
+                framesUntilRespawn = 300;
+            }
         }
 
         public override void Update()
@@ -79,6 +84,8 @@ namespace Space_Dust
 
                 offset = Vector2.Transform(new Vector2(25, 8), aimQuat);
                 EntityManager.Add(new Bullet(Position + offset, vel));
+                //Play laser sound
+                Sound.Shot.Play(0.2f, rand.NextFloat(-0.2f, 0.2f), 0);
             }
 
             if (cooldownRemaining > 0)

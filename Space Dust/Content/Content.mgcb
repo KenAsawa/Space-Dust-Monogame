@@ -25,6 +25,13 @@
 /processorParam:TextureFormat=Color
 /build:enemyRed4.png
 
+#begin File.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:File.spritefont;Score.spritefont
+
 #begin laserBlue01.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -84,4 +91,16 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:purple.png
+
+#begin sfx_laser1.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:sfx_laser1.ogg
+
+#begin sfx_laser2.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:sfx_laser2.ogg
 

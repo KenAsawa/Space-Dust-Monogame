@@ -11,6 +11,7 @@ namespace Space_Dust
         public static Texture2D Pointer { get; private set; }
         public static Texture2D Background { get; private set; }
         public static Texture2D Seeker { get; private set; }
+        public static SpriteFont Font { get; private set; }
 
         public static void Load(ContentManager content)
         {
@@ -19,6 +20,7 @@ namespace Space_Dust
             Pointer = content.Load<Texture2D>("pointerBlue");
             Background = content.Load<Texture2D>("NebulaTile");
             Seeker = content.Load<Texture2D>("enemyRed4");
+            Font = content.Load<SpriteFont>("Score");
         }
     }
 }

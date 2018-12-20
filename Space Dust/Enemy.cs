@@ -9,12 +9,17 @@ namespace Space_Dust
     class Enemy : Entity
     {
         private int timeUntilStart = 60;
+        private int hitpoints;
+
         public bool IsActive { get { return timeUntilStart <= 0; } }
+        public int pointValue { get; private set; }
         private List<IEnumerator<int>> behaviours = new List<IEnumerator<int>>();
 
-        public Enemy(Texture2D image, Vector2 position)
+        public Enemy(Texture2D image, Vector2 position, int pointValue, int hitpoints)
         {
             this.image = image;
+            this.pointValue = pointValue;
+            this.hitpoints = hitpoints;
             Position = position;
             Radius = image.Width / 2f;
             color = Color.Transparent;
@@ -33,12 +38,7 @@ namespace Space_Dust
             }
 
             Position += Velocity;
-            Velocity *= 0.8f;
-        }
-
-        public void WasShot()
-        {
-            IsExpired = true;
+            Velocity *= 0.8f; //Friction
         }
 
         private void AddBehaviour(IEnumerable<int> behaviour)
@@ -54,14 +54,40 @@ namespace Space_Dust
                     behaviours.RemoveAt(i--);
             }
         }
+
+        //Enemy hit
+        public void WasShot()
+        {
+            hitpoints--;
+            if(hitpoints <= 0)
+            {
+                IsExpired = true;
+                PlayerStatus.AddPoints(pointValue);
+            }
+        }
+
+        //Insta-kill
+        public void Kill()
+        {
+            IsExpired = true;
+        }
+
+        //Collide with enemy
+        public void HandleCollision(Enemy other)
+        {
+            var d = Position - other.Position;
+            Velocity += 10 * d / (d.LengthSquared() + 1);
+        }
+
         //Create Enemies
         public static Enemy CreateSeeker(Vector2 position)
         {
-            var enemy = new Enemy(Assets.Seeker, position);
+            var enemy = new Enemy(Assets.Seeker, position, 50, 8);
             enemy.AddBehaviour(enemy.FollowPlayer());
 
             return enemy;
         }
+
         //Enemy behaviors
         IEnumerable<int> FollowPlayer(float acceleration = 1f)
         {
@@ -75,11 +101,7 @@ namespace Space_Dust
             }
         }
 
-        public void HandleCollision(Enemy other)
-        {
-            var d = Position - other.Position;
-            Velocity += 10 * d / (d.LengthSquared() + 1);
-        }
+
 
 
     }
