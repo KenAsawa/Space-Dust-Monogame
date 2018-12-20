@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>C:/Users/docto/Desktop/Personal Coding Projects/Monogame/Space Dust/Space Dust/Content/metal.wav</SourceFile>
+  <SourceTime>2018-12-19T23:32:09.492724-06:00</SourceTime>
+  <DestFile>C:/Users/docto/Desktop/Personal Coding Projects/Monogame/Space Dust/Space Dust/Content/bin/DesktopGL/Content/metal.xnb</DestFile>
+  <DestTime>2018-12-19T23:33:48.1934541-06:00</DestTime>
+  <Importer>WavImporter</Importer>
+  <ImporterTime>2018-12-08T10:35:54-06:00</ImporterTime>
+  <Processor>SoundEffectProcessor</Processor>
+  <ProcessorTime>2018-12-08T10:35:54-06:00</ProcessorTime>
+  <Parameters>
+    <Key>Quality</Key>
+    <Value>Best</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>

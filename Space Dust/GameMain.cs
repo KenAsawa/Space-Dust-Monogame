@@ -67,11 +67,8 @@ namespace Space_Dust
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.Black);
-            //spriteBatch.Begin(transformMatrix: PlayerCamera.Transform, SpriteSortMode.Texture, BlendState.Additive);
-            //spriteBatch.Begin(SpriteSortMode.Deferred, null, SamplerState.LinearWrap, transformMatrix: PlayerCamera.Transform);
             spriteBatch.Begin(transformMatrix: PlayerCamera.Transform);
             spriteBatch.Draw(Assets.Background, new Vector2(0f, 0f), Color.White);
-            //spriteBatch.Draw(Assets.Background, GraphicsDevice.Viewport.Bounds, GraphicsDevice.Viewport.Bounds, Color.White);
             EntityManager.Draw(spriteBatch);
             spriteBatch.End();
 

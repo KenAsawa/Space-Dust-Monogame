@@ -1,18 +1,14 @@
-﻿using Microsoft.Xna.Framework.Audio;
+﻿using System;
+using System.Linq;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Media;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Space_Dust
 {
     static class Sound
     {
         public static Song Music { get; private set; }
-
         private static readonly Random rand = new Random();
 
         private static SoundEffect[] explosions;
@@ -22,8 +18,9 @@ namespace Space_Dust
         private static SoundEffect[] shots;
         public static SoundEffect Shot { get { return shots[rand.Next(shots.Length)]; } }
 
-        private static SoundEffect[] spawns;
-        public static SoundEffect Spawn { get { return spawns[rand.Next(spawns.Length)]; } }
+        public static SoundEffect hitAsteroid { get; private set; }
+        public static SoundEffect hitMetal { get; private set; }
+
 
         public static void Load(ContentManager content)
         {
@@ -32,8 +29,8 @@ namespace Space_Dust
             // These linq expressions are just a fancy way loading all sounds of each category into an array.
             //explosions = Enumerable.Range(1, 8).Select(x => content.Load<SoundEffect>("Sound/explosion-0" + x)).ToArray();
             shots = Enumerable.Range(1, 2).Select(x => content.Load<SoundEffect>("sfx_laser" + x)).ToArray();
-            //shots = Enumerable.Range(1, 4).Select(x => content.Load<SoundEffect>("sfx_laser2")).ToArray();
-            //spawns = Enumerable.Range(1, 8).Select(x => content.Load<SoundEffect>("Sound/spawn-0" + x)).ToArray();
+            hitAsteroid = content.Load<SoundEffect>("gravel");
+            hitMetal = content.Load<SoundEffect>("metal");
         }
     }
 }

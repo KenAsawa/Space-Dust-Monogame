@@ -11,19 +11,18 @@ namespace Space_Dust
     static class EnemySpawner
     {
         static Random rand = new Random();
-        static float inverseSpawnChance = 60;
+        static float seekerInverseSpawnChance = 160;
+        static float largeAsteroidInverseSpawnChance = 80;
 
         public static void Update()
         {
             if (!PlayerShip.Instance.IsDead && EntityManager.Count < 200)
             {
-                if (rand.Next((int)inverseSpawnChance) == 0)
+                if (rand.Next((int)seekerInverseSpawnChance) == 0)
                     EntityManager.Add(Enemy.CreateSeeker(GetSpawnPosition()));
+                if (rand.Next((int)largeAsteroidInverseSpawnChance) == 0)
+                    EntityManager.Add(Enemy.CreateLargeAsteroid(GetSpawnPosition()));
             }
-
-            // slowly increase the spawn rate as time progresses
-            if (inverseSpawnChance > 20)
-                inverseSpawnChance -= 0.005f;
         }
 
         private static Vector2 GetSpawnPosition()
@@ -31,16 +30,15 @@ namespace Space_Dust
             Vector2 pos;
             do
             {
-                pos = new Vector2(rand.Next((int)GameMain.ScreenSize.X), rand.Next((int)GameMain.ScreenSize.Y));
+                pos = new Vector2(rand.Next((int)GameMain.ScreenSize.X*2) + PlayerShip.Instance.Position.X - GameMain.ScreenSize.X, rand.Next((int)GameMain.ScreenSize.Y*2) + PlayerShip.Instance.Position.Y - GameMain.ScreenSize.Y);
             }
-            while (Vector2.DistanceSquared(pos, PlayerShip.Instance.Position) < 250 * 250);
+            while (Vector2.DistanceSquared(pos, PlayerShip.Instance.Position) < 600 * 600);
 
             return pos;
         }
 
         public static void Reset()
         {
-            inverseSpawnChance = 60;
         }
     }
 }

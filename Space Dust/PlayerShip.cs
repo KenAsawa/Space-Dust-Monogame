@@ -85,7 +85,7 @@ namespace Space_Dust
                 offset = Vector2.Transform(new Vector2(25, 8), aimQuat);
                 EntityManager.Add(new Bullet(Position + offset, vel));
                 //Play laser sound
-                Sound.Shot.Play(0.2f, rand.NextFloat(-0.2f, 0.2f), 0);
+                Sound.Shot.Play(0.8f, rand.NextFloat(-0.2f, 0.2f), 0);
             }
 
             if (cooldownRemaining > 0)

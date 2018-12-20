@@ -26,3 +26,15 @@ C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\b
 C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Content\Score.xnb
 C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Content\sfx_laser1.xnb
 C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Content\sfx_laser2.xnb
+C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Content\meteorBrown_big1.xnb
+C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Content\meteorBrown_big2.xnb
+C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Content\meteorBrown_big3.xnb
+C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Content\meteorBrown_big4.xnb
+C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Content\meteorBrown_med1.xnb
+C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Content\meteorBrown_med3.xnb
+C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Content\meteorBrown_small1.xnb
+C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Content\meteorBrown_small2.xnb
+C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Content\meteorBrown_tiny1.xnb
+C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Content\meteorBrown_tiny2.xnb
+C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Content\gravel.xnb
+C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Content\metal.xnb

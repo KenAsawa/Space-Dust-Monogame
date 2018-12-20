@@ -13,10 +13,13 @@ namespace Space_Dust
 
         public bool IsActive { get { return timeUntilStart <= 0; } }
         public int pointValue { get; private set; }
+        private static Random rand = new Random();
+        private int enemyType; //0=Seeker, 1=Asteroid
         private List<IEnumerator<int>> behaviours = new List<IEnumerator<int>>();
 
-        public Enemy(Texture2D image, Vector2 position, int pointValue, int hitpoints)
+        public Enemy(int enemyType, Texture2D image, Vector2 position, int pointValue, int hitpoints)
         {
+            this.enemyType = enemyType;
             this.image = image;
             this.pointValue = pointValue;
             this.hitpoints = hitpoints;
@@ -59,6 +62,14 @@ namespace Space_Dust
         public void WasShot()
         {
             hitpoints--;
+            if(enemyType==1)
+            {
+                Sound.hitAsteroid.Play(0.8f, rand.NextFloat(-1f, 1f), 0);
+            }
+            if (enemyType == 0)
+            {
+                Sound.hitMetal.Play(0.5f, rand.NextFloat(-1f, -0.5f), 0);
+            }
             if(hitpoints <= 0)
             {
                 IsExpired = true;
@@ -76,13 +87,33 @@ namespace Space_Dust
         public void HandleCollision(Enemy other)
         {
             var d = Position - other.Position;
-            Velocity += 10 * d / (d.LengthSquared() + 1);
+            Velocity += 100 * d / (d.LengthSquared() + 1);
         }
 
         //Create Enemies
+        public static Enemy CreateLargeAsteroid(Vector2 position)
+        {
+            int type = rand.Next(4);
+            switch(type)
+            {
+                case 0:{ var enemy = new Enemy(1,Assets.LargeAsteroid1, position, 50, 20);
+                        enemy.AddBehaviour(enemy.MoveRandomly());
+                        return enemy;}
+                case 1:{ var enemy = new Enemy(1,Assets.LargeAsteroid2, position, 50, 20);
+                        enemy.AddBehaviour(enemy.MoveRandomly());
+                        return enemy;}
+                case 2:{ var enemy = new Enemy(1,Assets.LargeAsteroid3, position, 50, 20);
+                        enemy.AddBehaviour(enemy.MoveRandomly());
+                        return enemy;}
+                case 3:{ var enemy = new Enemy(1,Assets.LargeAsteroid4, position, 50, 20);
+                        enemy.AddBehaviour(enemy.MoveRandomly());
+                        return enemy;}
+            }
+            return null;
+        }
         public static Enemy CreateSeeker(Vector2 position)
         {
-            var enemy = new Enemy(Assets.Seeker, position, 50, 8);
+            var enemy = new Enemy(0,Assets.Seeker, position, 50, 8);
             enemy.AddBehaviour(enemy.FollowPlayer());
 
             return enemy;
@@ -97,6 +128,18 @@ namespace Space_Dust
                 if (Velocity != Vector2.Zero)
                     Orientation = (float)(Velocity.ToAngle() - (Math.PI / 2)); //The - Math.PI/2  corrects the angle.
 
+                yield return 0;
+            }
+        }
+
+        IEnumerable<int> MoveRandomly()
+        {
+            int Y = rand.Next(6) - 3;
+            int X = rand.Next(6) - 3;
+            while (true)
+            {
+                Velocity.X = X;
+                Velocity.Y = Y;
                 yield return 0;
             }
         }

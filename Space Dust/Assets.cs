@@ -10,8 +10,13 @@ namespace Space_Dust
         public static Texture2D PlayerBullet { get; private set; }
         public static Texture2D Pointer { get; private set; }
         public static Texture2D Background { get; private set; }
-        public static Texture2D Seeker { get; private set; }
         public static SpriteFont Font { get; private set; }
+
+        public static Texture2D Seeker { get; private set; }
+        public static Texture2D LargeAsteroid1 { get; private set; }
+        public static Texture2D LargeAsteroid2 { get; private set; }
+        public static Texture2D LargeAsteroid3 { get; private set; }
+        public static Texture2D LargeAsteroid4 { get; private set; }
 
         public static void Load(ContentManager content)
         {
@@ -19,8 +24,13 @@ namespace Space_Dust
             PlayerBullet = content.Load<Texture2D>("laserBlue01");
             Pointer = content.Load<Texture2D>("pointerBlue");
             Background = content.Load<Texture2D>("NebulaTile");
-            Seeker = content.Load<Texture2D>("enemyRed4");
             Font = content.Load<SpriteFont>("Score");
+            //Enemies
+            Seeker = content.Load<Texture2D>("enemyRed4");
+            LargeAsteroid1 = content.Load<Texture2D>("meteorBrown_big1");
+            LargeAsteroid2 = content.Load<Texture2D>("meteorBrown_big2");
+            LargeAsteroid3 = content.Load<Texture2D>("meteorBrown_big3");
+            LargeAsteroid4 = content.Load<Texture2D>("meteorBrown_big4");
         }
     }
 }
