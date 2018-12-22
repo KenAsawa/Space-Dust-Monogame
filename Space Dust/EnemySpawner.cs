@@ -11,8 +11,9 @@ namespace Space_Dust
     static class EnemySpawner
     {
         static Random rand = new Random();
-        static float seekerInverseSpawnChance = 160;
+        static float seekerInverseSpawnChance = 80;
         static float largeAsteroidInverseSpawnChance = 80;
+        static float mediumAsteroidInverseSpawnChance = 80;
 
         public static void Update()
         {
@@ -22,10 +23,12 @@ namespace Space_Dust
                     EntityManager.Add(Enemy.CreateSeeker(GetSpawnPosition()));
                 if (rand.Next((int)largeAsteroidInverseSpawnChance) == 0)
                     EntityManager.Add(Enemy.CreateLargeAsteroid(GetSpawnPosition()));
+                if (rand.Next((int)mediumAsteroidInverseSpawnChance) == 0)
+                    EntityManager.Add(Enemy.CreateMediumAsteroid(GetSpawnPosition()));
             }
         }
 
-        private static Vector2 GetSpawnPosition()
+        public static Vector2 GetSpawnPosition()
         {
             Vector2 pos;
             do

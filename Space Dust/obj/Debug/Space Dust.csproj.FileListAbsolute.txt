@@ -38,25 +38,17 @@ C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\b
 C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Content\meteorBrown_tiny2.xnb
 C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Content\gravel.xnb
 C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Content\metal.xnb
-C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Content\Song1.ogg
 C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Content\Song1.xnb
-C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Content\Song2.ogg
 C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Content\Song2.xnb
-C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Content\Song3.ogg
 C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Content\Song3.xnb
-C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Content\Song4.ogg
 C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Content\Song4.xnb
-C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Content\Song5.ogg
 C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Content\Song5.xnb
-C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Content\Song6.ogg
 C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Content\Song6.xnb
-C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Content\Song7.ogg
 C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Content\Song7.xnb
 C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Content\Break the Targets (Remix) - by Cyber Shaman.ogg
 C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Content\Break the Targets (Remix) - by Cyber Shaman.xnb
-C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Content\boop.ogg
 C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Content\boop.xnb
 C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Content\buttonBlue.xnb
-C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Content\fireEffect.xnb
-C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Content\fireEffect2.xnb
 C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Content\fire16.xnb
+C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Content\cursor.xnb
+C:\Users\docto\Desktop\Personal Coding Projects\Monogame\Space Dust\Space Dust\bin\DesktopGL\AnyCPU\Debug\Content\explosion-012.xnb

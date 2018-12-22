@@ -8,13 +8,14 @@ namespace Space_Dust
 {
     class Enemy : Entity
     {
+        int lifetimeRemaining = 5000;
         private int timeUntilStart = 60;
         private int hitpoints;
 
         public bool IsActive { get { return timeUntilStart <= 0; } }
         public int pointValue { get; private set; }
         private static Random rand = new Random();
-        private int enemyType; //0=Seeker, 1=Asteroid
+        private int enemyType; //0=Seeker, 1=LargeAsteroid, 2=MedAsteroid
         private List<IEnumerator<int>> behaviours = new List<IEnumerator<int>>();
 
         public Enemy(int enemyType, Texture2D image, Vector2 position, int pointValue, int hitpoints)
@@ -33,11 +34,16 @@ namespace Space_Dust
             if (timeUntilStart <= 0)
             {
                 ApplyBehaviours();
+                lifetimeRemaining--;
             }
             else
             {
                 timeUntilStart--;
                 color = Color.White * (1 - timeUntilStart / 60f);
+            }
+            if(lifetimeRemaining <= 0)
+            {
+                Kill();
             }
             Position += Velocity;
         }
@@ -68,13 +74,23 @@ namespace Space_Dust
             {
                 Assets.hitMetal.Play(0.2f, rand.NextFloat(-1f, -0.5f), 0);
             }
-            if(hitpoints <= 0)
+            if (hitpoints <= 0)
             {
                 IsExpired = true;
                 PlayerStatus.AddPoints(pointValue);
+                if (enemyType == 0)
+                {
+                    Assets.explosion.Play(0.6f, rand.NextFloat(-0.5f, 0.5f), 0);
+                }
+                if (enemyType == 1)
+                {
+                    EntityManager.Add(CreateMediumAsteroid(Position));
+                    EntityManager.Add(CreateMediumAsteroid(Position));
+                    EntityManager.Add(CreateMediumAsteroid(Position));
+                }
             }
         }
-
+        
         //Insta-kill
         public void Kill()
         {
@@ -94,18 +110,39 @@ namespace Space_Dust
             int type = rand.Next(4);
             switch(type)
             {
-                case 0:{ var enemy = new Enemy(1,Assets.LargeAsteroid1, position, 50, 20);
+                case 0:{ var enemy = new Enemy(1,Assets.LargeAsteroid1, position, 100, 20);
                         enemy.AddBehaviour(enemy.MoveRandomly());
                         return enemy;}
-                case 1:{ var enemy = new Enemy(1,Assets.LargeAsteroid2, position, 50, 20);
+                case 1:{ var enemy = new Enemy(1,Assets.LargeAsteroid2, position, 100, 20);
                         enemy.AddBehaviour(enemy.MoveRandomly());
                         return enemy;}
-                case 2:{ var enemy = new Enemy(1,Assets.LargeAsteroid3, position, 50, 20);
+                case 2:{ var enemy = new Enemy(1,Assets.LargeAsteroid3, position, 100, 20);
                         enemy.AddBehaviour(enemy.MoveRandomly());
                         return enemy;}
-                case 3:{ var enemy = new Enemy(1,Assets.LargeAsteroid4, position, 50, 20);
+                case 3:{ var enemy = new Enemy(1,Assets.LargeAsteroid4, position, 100, 20);
                         enemy.AddBehaviour(enemy.MoveRandomly());
                         return enemy;}
+            }
+            return null;
+        }
+
+        public static Enemy CreateMediumAsteroid(Vector2 position)
+        {
+            int type = rand.Next(2);
+            switch (type)
+            {
+                case 0:
+                    {
+                        var enemy = new Enemy(2, Assets.MediumAsteroid1, position, 25, 5);
+                        enemy.AddBehaviour(enemy.MoveRandomly());
+                        return enemy;
+                    }
+                case 1:
+                    {
+                        var enemy = new Enemy(2, Assets.MediumAsteroid2, position, 25, 5);
+                        enemy.AddBehaviour(enemy.MoveRandomly());
+                        return enemy;
+                    }
             }
             return null;
         }

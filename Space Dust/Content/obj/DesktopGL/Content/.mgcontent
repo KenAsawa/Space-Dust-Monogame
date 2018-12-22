@@ -7,11 +7,11 @@
     <File>C:/Users/docto/Desktop/Personal Coding Projects/Monogame/Space Dust/Space Dust/Content/boop.mp3</File>
     <File>C:/Users/docto/Desktop/Personal Coding Projects/Monogame/Space Dust/Space Dust/Content/Break the Targets (Remix) - by Cyber Shaman.mp3</File>
     <File>C:/Users/docto/Desktop/Personal Coding Projects/Monogame/Space Dust/Space Dust/Content/buttonBlue.png</File>
+    <File>C:/Users/docto/Desktop/Personal Coding Projects/Monogame/Space Dust/Space Dust/Content/cursor.png</File>
     <File>C:/Users/docto/Desktop/Personal Coding Projects/Monogame/Space Dust/Space Dust/Content/enemyRed4.png</File>
+    <File>C:/Users/docto/Desktop/Personal Coding Projects/Monogame/Space Dust/Space Dust/Content/explosion-012.mp3</File>
     <File>C:/Users/docto/Desktop/Personal Coding Projects/Monogame/Space Dust/Space Dust/Content/File.spritefont</File>
     <File>C:/Users/docto/Desktop/Personal Coding Projects/Monogame/Space Dust/Space Dust/Content/fire16.png</File>
-    <File>C:/Users/docto/Desktop/Personal Coding Projects/Monogame/Space Dust/Space Dust/Content/fireEffect.png</File>
-    <File>C:/Users/docto/Desktop/Personal Coding Projects/Monogame/Space Dust/Space Dust/Content/fireEffect2.png</File>
     <File>C:/Users/docto/Desktop/Personal Coding Projects/Monogame/Space Dust/Space Dust/Content/gravel.wav</File>
     <File>C:/Users/docto/Desktop/Personal Coding Projects/Monogame/Space Dust/Space Dust/Content/laserBlue01.png</File>
     <File>C:/Users/docto/Desktop/Personal Coding Projects/Monogame/Space Dust/Space Dust/Content/metal.wav</File>
@@ -37,9 +37,9 @@
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File>Score.spritefont</File>
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

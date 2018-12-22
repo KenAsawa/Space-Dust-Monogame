@@ -8,7 +8,6 @@ namespace Space_Dust
     //Player is an Entity
     class PlayerShip : Entity
     {
-        private KeyboardState keyboardState;
         const int cooldownFrames = 10;
         int cooldownRemaining = 0;
         static Random rand = new Random();
@@ -41,10 +40,7 @@ namespace Space_Dust
             framesUntilRespawn = 60;
             PlayerStatus.RemoveLife();
             EnemySpawner.Reset();
-            if(PlayerStatus.Lives <= 0)
-            {
-                framesUntilRespawn = 300;
-            }
+            Assets.explosion.Play(1f, rand.NextFloat(0.5f, 1f), 0);
         }
 
         public override void Update()
@@ -105,7 +101,10 @@ namespace Space_Dust
             if (!IsDead)
             {
                 base.Draw(spriteBatch);
+                Vector2 anchor = new Vector2(-image.Width/2,-image.Height/2);
                 spriteBatch.Draw(Assets.fireEffect, new Vector2(Position.X, Position.Y), null, color, Orientation, new Vector2(Assets.fireEffect.Width * (.50f), -(Assets.fireEffect.Height) * (1.2f)), 1f, 0, 0);
+                //spriteBatch.Draw(Assets.fireEffect, Position, null, color, Orientation, anchor, 1f, 0, 0);
+                //spriteBatch.Draw(Assets.fireEffect, Position, null, color, Orientation, new Vector2(0,0), 1f, 0, 0);
             }
             //spriteBatch.Draw(Assets.fireEffect, new Vector2(Position.X, Position.Y), null, color, Orientation, new Vector2(Size.X-92,Size.Y-113), 1f, 0, 0);
             //spriteBatch.Draw(Assets.fireEffect, new Vector2(Position.X, Position.Y), null, color, Orientation, new Vector2(Assets.Player.Width - 92, Assets.Player.Height - 113), 1f, 0, 0);

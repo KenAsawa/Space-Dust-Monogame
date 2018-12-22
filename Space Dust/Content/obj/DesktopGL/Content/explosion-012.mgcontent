@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>C:/Users/docto/Desktop/Personal Coding Projects/Monogame/Space Dust/Space Dust/Content/explosion-012.mp3</SourceFile>
+  <SourceTime>2018-12-21T10:59:16.922574-06:00</SourceTime>
+  <DestFile>C:/Users/docto/Desktop/Personal Coding Projects/Monogame/Space Dust/Space Dust/Content/bin/DesktopGL/Content/explosion-012.xnb</DestFile>
+  <DestTime>2018-12-21T11:01:18.0565997-06:00</DestTime>
+  <Importer>Mp3Importer</Importer>
+  <ImporterTime>2018-12-08T10:35:54-06:00</ImporterTime>
+  <Processor>SoundEffectProcessor</Processor>
+  <ProcessorTime>2018-12-08T10:35:54-06:00</ProcessorTime>
+  <Parameters>
+    <Key>Quality</Key>
+    <Value>Best</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>

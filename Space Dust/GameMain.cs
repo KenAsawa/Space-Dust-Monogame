@@ -14,6 +14,7 @@ namespace Space_Dust
         private static Camera playerCamera;
         Random rand = new Random();
         private List<Component> gameComponents;
+        private List<Component> endgameComponents;
 
         public static GameMain Instance { get; private set; }
         public static Viewport Viewport { get { return Instance.GraphicsDevice.Viewport; } }
@@ -47,11 +48,10 @@ namespace Space_Dust
             bgm.Add(Assets.bgsong1);
             if (MediaPlayer.State != MediaState.Playing && MediaPlayer.PlayPosition.TotalSeconds == 0.0f)
             {
-                songNameFade = 160;
+                
                 currentSong = rand.Next(bgm.Count);
                 MediaPlayer.Play(bgm[currentSong]);
             }
-            IsMouseVisible = true;
         }
         
         protected override void LoadContent()
@@ -62,21 +62,32 @@ namespace Space_Dust
 
             var playButton = new Button()
             {
-                Position = new Vector2((Viewport.Width - Assets.MenuButton.Width) / 2, 200),
+                Position = new Vector2((Viewport.Width - Assets.MenuButton.Width) / 2, (Viewport.Height - Assets.MenuButton.Height) / 2  +25),
                 Text = "Play",
             };
             playButton.Click += PlayButton_Click;
             var quitButton = new Button()
             {
-                Position = new Vector2((Viewport.Width- Assets.MenuButton.Width)/2, 250),
+                Position = new Vector2((Viewport.Width- Assets.MenuButton.Width)/2, (Viewport.Height - Assets.MenuButton.Height) / 2 +75),
                 Text = "Quit",
             };
-
             quitButton.Click += QuitButton_Click;
+            var restartButton = new Button()
+            {
+                Position = new Vector2((Viewport.Width - Assets.MenuButton.Width) / 2, (Viewport.Height - Assets.MenuButton.Height) / 2 + 125),
+                Text = "Restart",
+            };
+            restartButton.Click += RestartButton_Click;
+
             gameComponents = new List<Component>()
             {
                 playButton,
                 quitButton,
+            };
+
+            endgameComponents = new List<Component>()
+            {
+                restartButton,
             };
         }
         
@@ -89,6 +100,7 @@ namespace Space_Dust
             
             if (currentState == GameState.menuScreen)
             {
+                Input.Update();
                 foreach (var component in gameComponents)
                     component.Update(gameTime);
             }
@@ -102,6 +114,9 @@ namespace Space_Dust
             }
             if (currentState == GameState.endScreen)
             {
+                Input.Update();
+                foreach (var component in endgameComponents)
+                    component.Update(gameTime);
             }
             base.Update(gameTime);
         }
@@ -115,12 +130,19 @@ namespace Space_Dust
                 spriteBatch.Begin();
                 foreach (var component in gameComponents)
                     component.Draw(gameTime, spriteBatch);
+                spriteBatch.Draw(Assets.Cursor, new Vector2(Input.MousePosition.X, Input.MousePosition.Y), Color.White); //Draw pointer.
                 spriteBatch.End();
             }
             else if (currentState == GameState.gameScreen)
             {
                 spriteBatch.Begin(transformMatrix: PlayerCamera.Transform);
-                spriteBatch.Draw(Assets.Background, new Vector2(0f, 0f), Color.White);
+                for(int i = -2; i < 3; i++)
+                {
+                    for(int j = -2; j < 3; j++)
+                    {
+                        spriteBatch.Draw(Assets.Background, new Vector2(i*1024f, j*1024f), Color.White);
+                    }
+                }
                 EntityManager.Draw(spriteBatch);
                 spriteBatch.End();
 
@@ -135,12 +157,7 @@ namespace Space_Dust
                 }
                 if (PlayerStatus.IsGameOver)
                 {
-                    string text = "Game Over\n" +
-                        "Your Score: " + PlayerStatus.Score + "\n" +
-                        "High Score: " + PlayerStatus.HighScore;
-
-                    Vector2 textSize = Assets.Font.MeasureString(text);
-                    spriteBatch.DrawString(Assets.Font, text, ScreenSize / 2 - textSize / 2, Color.White);
+                    currentState = GameState.endScreen;
                 }
                 //MousePointer
                 spriteBatch.Draw(Assets.Pointer, new Vector2(Input.MousePosition.X - (24f), Input.MousePosition.Y - (24f)), Color.White); //Draw pointer.
@@ -148,6 +165,17 @@ namespace Space_Dust
             }
             else if (currentState == GameState.endScreen)
             {
+                spriteBatch.Begin();
+                string text = "Game Over\n" +
+                        "Your Score: " + PlayerStatus.Score + "\n" +
+                        "High Score: " + PlayerStatus.HighScore;
+
+                Vector2 textSize = Assets.Font.MeasureString(text);
+                spriteBatch.DrawString(Assets.Font, text, ScreenSize / 2 - textSize / 2, Color.White);
+                foreach (var component in endgameComponents)
+                    component.Draw(gameTime, spriteBatch);
+                spriteBatch.Draw(Assets.Cursor, new Vector2(Input.MousePosition.X, Input.MousePosition.Y), Color.White); //Draw pointer.
+                spriteBatch.End();
             }
             else
             {
@@ -171,6 +199,15 @@ namespace Space_Dust
         private void PlayButton_Click(object sender, EventArgs e)
         {
             currentState = GameState.gameScreen;
+            songNameFade = 160;
         }
+
+        private void RestartButton_Click(object sender, EventArgs e)
+        {
+            PlayerStatus.Reset();
+            currentState = GameState.gameScreen;
+            songNameFade = 160;
+        }
+        
     }
 }
